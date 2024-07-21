@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guess The Cat</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/general.css" />
+		<link rel="stylesheet" href="styles/card.css" />
+		<link rel="stylesheet" href="styles/game.css" />
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<div class="image_box">
+					<a href="index.html">
+						<img src="images/logo.png" alt="Logo" class="logo" />
+					</a>
+				</div>
+				<nav class="navbar">
+					<ul class="nav__links">
+						<li class="nav__item">
+							<a href="credits.html" class="nav__link credits">Credits</a>
+						</li>
+					</ul>
+					<button class="btn_play-game">
+						<a href="index.html">HOME</a>
+					</button>
+				</nav>
+			</header>
+		</div>
+
+		<div class="wrapper">
+			<p class="cat-name">Bingus</p>
+			<div class="question-count">
+				<span class="cat-count">1/10</span>
+				<div class="wrong-answer_div">
+					<span class="wrong-answer">Wrong answer!</span>
+				</div>
+			</div>
+		</div>
+		<hr class="cat-line" />
+
+		<div class="grid">
+			<div class="answer" data-cat="Bingus">
+				<div class="answer_image-div">
+					<img
+						src="images/Bingus.png"
+						alt="Beluga image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Beluga">
+				<div class="answer_image-div">
+					<img
+						src="images/Beluga.png"
+						alt="Beluga image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Floppa">
+				<div class="answer_image-div">
+					<img
+						src="images/Floppa.png"
+						alt="Floppa image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Hecker">
+				<div class="answer_image-div">
+					<img
+						src="images/Hecker.png"
+						alt="Hecker image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Angry as fuk cat">
+				<div class="answer_image-div">
+					<img
+						src="images/Angry as fuk cat.png"
+						alt="Angry as fuk cat image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Zabloing">
+				<div class="answer_image-div">
+					<img
+						src="images/Zabloing.png"
+						alt="Zabloing image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Smudge">
+				<div class="answer_image-div">
+					<img
+						src="images/Smudge.png"
+						alt="Smudge image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Maxwell">
+				<div class="answer_image-div">
+					<img
+						src="images/Maxwell.png"
+						alt="Maxwell image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+
+			<div class="answer" data-cat="Michael">
+				<div class="answer_image-div">
+					<img
+						src="images/Michael.png"
+						alt="Michael image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="result" style="display: none">
+			<p class="result-text"></p>
+			<button class="retry-button">Try Again</button>
+		</div>
+
+		<script src="scripts/script.js"></script>
+	</body>
+</html>
