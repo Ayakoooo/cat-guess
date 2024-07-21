@@ -1,172 +1,143 @@
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	max-width: 1440px;
-	margin: 3rem auto;
-	height: 50vh;
-	column-gap: 2rem;
-	row-gap: 1rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guess The Cat</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/general.css" />
+		<link rel="stylesheet" href="styles/card.css" />
+		<link rel="stylesheet" href="styles/game.css" />
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<div class="image_box">
+					<a href="index.html">
+						<img src="images/logo.png" alt="Logo" class="logo" />
+					</a>
+				</div>
+				<nav class="navbar">
+					<ul class="nav__links">
+						<li class="nav__item">
+							<a href="credits.html" class="nav__link credits">Credits</a>
+						</li>
+					</ul>
+					<button class="btn_play-game">
+						<a href="index.html">HOME</a>
+					</button>
+				</nav>
+			</header>
+		</div>
 
-.answer {
-	width: 100%;
-}
+		<div class="wrapper">
+			<p class="cat-name">Bingus</p>
+			<div class="question-count">
+				<span class="cat-count">1/10</span>
+				<div class="wrong-answer_div">
+					<span class="wrong-answer">Wrong answer!</span>
+				</div>
+			</div>
+		</div>
+		<hr class="cat-line" />
 
-.answer_image-div {
-	width: 250px;
-	border-radius: 20px;
-	cursor: pointer;
-}
+		<div class="grid">
+			<div class="answer" data-cat="Bingus">
+				<div class="answer_image-div">
+					<img
+						src="images/Bingus.png"
+						alt="Beluga image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.answer-image {
-	width: 100%;
-}
+			<div class="answer" data-cat="Beluga">
+				<div class="answer_image-div">
+					<img
+						src="images/Beluga.png"
+						alt="Beluga image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-/* .wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 1440px;
-	margin: 2rem auto;
-	flex-wrap: wrap;
-} */
+			<div class="answer" data-cat="Floppa">
+				<div class="answer_image-div">
+					<img
+						src="images/Floppa.png"
+						alt="Floppa image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.cat-name {
-	display: inline-block;
-	font-size: 6rem;
-}
+			<div class="answer" data-cat="Hecker">
+				<div class="answer_image-div">
+					<img
+						src="images/Hecker.png"
+						alt="Hecker image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.cat-count {
-	font-weight: bold;
-	font-size: 6rem;
-}
+			<div class="answer" data-cat="Angry as fuk cat">
+				<div class="answer_image-div">
+					<img
+						src="images/Angry as fuk cat.png"
+						alt="Angry as fuk cat image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.answer {
-	transform: scale(1);
-	transition: all 0.4s;
-}
+			<div class="answer" data-cat="Zabloing">
+				<div class="answer_image-div">
+					<img
+						src="images/Zabloing.png"
+						alt="Zabloing image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.answer:hover {
-	transform: scale(1.07);
-}
+			<div class="answer" data-cat="Smudge">
+				<div class="answer_image-div">
+					<img
+						src="images/Smudge.png"
+						alt="Smudge image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.cat-line {
-	max-width: 1440px;
-	margin: 0 auto;
-	height: 3px;
-	background-color: black;
-}
+			<div class="answer" data-cat="Maxwell">
+				<div class="answer_image-div">
+					<img
+						src="images/Maxwell.png"
+						alt="Maxwell image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
 
-.question-count {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+			<div class="answer" data-cat="Michael">
+				<div class="answer_image-div">
+					<img
+						src="images/Michael.png"
+						alt="Michael image"
+						class="answer-image"
+					/>
+				</div>
+			</div>
+		</div>
 
-.wrong-answer_div {
-	display: none;
-	font-size: 1.5rem;
-	color: red;
-	text-align: center;
-	margin-top: 10px;
-}
+		<div class="result" style="display: none">
+			<p class="result-text"></p>
+			<button class="retry-button">Try Again</button>
+		</div>
 
-.wrong-answer-animation {
-	animation: shake 0.5s ease-in-out;
-}
-
-@keyframes shake {
-	0% {
-		transform: translateX(0);
-	}
-	25% {
-		transform: translateX(-10px);
-	}
-	50% {
-		transform: translateX(0);
-	}
-	75% {
-		transform: translateX(10px);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-@media screen and (max-width: 600px) {
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 380px;
-	}
-	.cat-name {
-		font-size: 2.5rem;
-		margin-left: 1.2rem;
-	}
-	.question-count {
-		display: inline-block;
-	}
-	.cat-count {
-		font-size: 2.5rem;
-		margin-left: 3rem;
-	}
-	.grid {
-		align-items: center;
-	}
-	.answer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.cat-line {
-		width: 370px;
-	}
-}
-.wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 1440px;
-	margin: 2rem auto;
-	flex-wrap: wrap;
-	position: sticky;
-	top: 0;
-	background-color: rgb(255, 255, 237); 
-	z-index: 1000;
-	padding: 1rem 0; 
-}
-
-
-@media screen and (max-width: 600px) {
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%; 
-	}
-	.cat-name {
-		font-size: 2.5rem;
-		margin-left: 1.2rem;
-	}
-	.question-count {
-		display: inline-block;
-	}
-	.cat-count {
-		font-size: 2.5rem;
-		margin-left: 3rem;
-	}
-	.grid {
-		align-items: center;
-	}
-	.answer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.cat-line {
-		width: 100%; 
-	}
-}
+		<script src="scripts/script.js"></script>
+	</body>
+</html>
