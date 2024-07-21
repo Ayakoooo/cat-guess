@@ -68,6 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 			currentQuestionIndex++;
 			updateQuestion();
+			// Scroll to the top on mobile devices
+			if (window.innerWidth <= 600) {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			}
 		});
 	});
 
